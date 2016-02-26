@@ -5,10 +5,7 @@ require("../../css/common/grid.css");
 require("../../css/page/index.less");
 
 
-var oP = document.createElement('p');
-oP.className = 'text';
-oP.innerHTML = '这是由js生成的一句话。';
-document.querySelector('.g-bd').appendChild(oP);
+$('.g-bd').append('<p class="text">这是由js生成的一句话。</p>');
 
 //增加事件
 $('.btn').click(function() {
