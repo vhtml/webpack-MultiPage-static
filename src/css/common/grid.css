@@ -1,0 +1,14 @@
+/*布局*/
+.g-hd{
+	height: 50px;
+	background-color: #333;
+}
+.g-bd{
+	padding: 20px;
+	min-height: 800px;
+	background: url(../../img/mask.png) repeat;
+}
+.g-ft{
+	height: 50px;
+	background-color: #333;
+}

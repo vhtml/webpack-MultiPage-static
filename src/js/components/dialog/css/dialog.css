@@ -1,0 +1,27 @@
+.v-dialog{
+	position: fixed;
+	display: none;
+	left: 0;top:0;right:0;bottom:0;
+	background-color: rgba(0,0,0,.5);
+}
+.v-dialog .close{
+	position: absolute;
+	top:20px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 40px;
+	font-size: 40px;
+	color:#666;
+	background-color: rgba(255,255,255,.8);
+	cursor: pointer;
+}
+.v-dialog .img{
+	position: absolute;
+	margin:auto;
+	top:0;right: 0;bottom:0;left: 0;
+	max-width: 90%;
+	max-height: 90%;
+}
