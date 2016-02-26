@@ -23,7 +23,7 @@
 
 使用`npm install plugins --save-dev`安装项目所需依赖。最终package.json的依赖声明如下：
 
-```javasript
+```javascript
 "devDependencies": {
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
@@ -37,7 +37,7 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.12.13",
     "webpack-dev-server": "^1.14.1"
-  }
+}
 ```
 
 #### 主要目录结构
