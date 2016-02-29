@@ -333,11 +333,11 @@ module.exports = {
 
 可以看到生成的文件除了保留原模板中的内容以外，还根据入口文件list.js的定义，自动添加需要引入CSS与JS文件，以及favicon，同时还添加了相应的hash值。
 
-执行`webpack-dev-server`启动devServer，打开http://localhost:9090/dist/view/index.html就可以进行页面的预览了。说明我们的资源路径生成也是没有问题的。
+执行`webpack-dev-server`启动devServer，打开http://localhost:9090/dist/view/index.html就可以进行正常的页面预览了。说明我们的资源路径生成也是没有问题的。
 
 好了，纯静态的webpack前端构建过程就是这样了。然而你可能还有疑问。
 
 - 假如你是个懒人，可能会觉得目前的配置不够智能，每增加一个页面，就得再手动添加入口文件及模板配置。
 - 假如你是个全栈工程师或者以nodejs做中间层的开发者，你的模板不是纯粹的html，但是又需要像html模板那样能自动根据需要添加css与js文件。
 
-还等什么，快来这里看看吧——[基于webpack的前端工程化开发之多页站点篇（二）](https://github.com/vhtml/webpack-MultiplePage)
+还等什么，快戳这里吧——[基于webpack的前端工程化开发之多页站点篇（二）](https://github.com/vhtml/webpack-MultiplePage)
