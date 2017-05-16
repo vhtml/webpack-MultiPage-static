@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "pure front demo",
   "scripts": {
-    "test": "null"
+    "dev": "webpack-dev-server",
+    "build": "webpack"
   },
   "author": "vhtml",
   "license": "ISC",
@@ -19,6 +20,12 @@
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.13",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "eslint": "^3.15.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-html": "^2.0.0",
+    "eslint-plugin-promise": "^3.4.1",
+    "eslint-plugin-standard": "^2.0.1"
   }
 }

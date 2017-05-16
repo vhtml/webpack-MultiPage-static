@@ -25,18 +25,18 @@
 
 ```javascript
 "devDependencies": {
-    "css-loader": "^0.23.1",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "file-loader": "^0.8.5",
-    "html-loader": "^0.4.3",
-    "html-webpack-plugin": "^2.9.0",
-    "jquery": "^1.12.0",
-    "less": "^2.6.0",
-    "less-loader": "^2.2.2",
-    "style-loader": "^0.13.0",
-    "url-loader": "^0.5.7",
-    "webpack": "^1.12.13",
-    "webpack-dev-server": "^1.14.1"
+  "css-loader": "^0.23.1",
+  "extract-text-webpack-plugin": "^1.0.1",
+  "file-loader": "^0.8.5",
+  "html-loader": "^0.4.3",
+  "html-webpack-plugin": "^2.9.0",
+  "jquery": "^1.12.0",
+  "less": "^2.6.0",
+  "less-loader": "^2.2.2",
+  "style-loader": "^0.13.0",
+  "url-loader": "^0.5.7",
+  "webpack": "^1.12.13",
+  "webpack-dev-server": "^1.14.1"
 }
 ```
 
@@ -44,24 +44,24 @@
 
 ```
 - website
-    - src                #代码开发目录
-        - css            #css目录，按照页面（模块）、通用、第三方三个级别进行组织
-            + page
-            + common
-            + lib
-        + img            #图片资源
-        - js             #JS脚本，按照page、components进行组织
-            + page
-            + components
-        + view           #HTML模板
-    - dist               #webpack编译打包输出目录，无需建立目录可由webpack根据配置自动生成
-        + css                
-        + js
-        + view
-    + node_modules       #所使用的nodejs模块
-    package.json         #项目配置
-    webpack.config.js    #webpack配置
-    README.md            #项目说明
+  - src                #代码开发目录
+    - css              #css目录，按照页面（模块）、通用、第三方三个级别进行组织
+      + page
+      + common
+      + lib
+    + img              #图片资源
+    - js               #JS脚本，按照page、components进行组织
+      + page
+      + components
+    + view             #HTML模板
+  - dist               #webpack编译打包输出目录，无需建立目录可由webpack根据配置自动生成
+    + css                
+    + js
+    + view
+  + node_modules       #所使用的nodejs模块
+  package.json         #项目配置
+  webpack.config.js    #webpack配置
+  README.md            #项目说明
 ```
 > 假如你是一名纯粹的前端工程师，使用webpack构建website的目录结构大概就这样了，当然你也可以根据自己的喜好自由设计目录结构。
 >
@@ -77,13 +77,12 @@ index.js内容如下：
 
 ```javascript
 //引入css
-require("../../css/lib/reset.css");
-require("../../css/common/global.css");
-require("../../css/common/grid.css");
-require("../../css/page/index.less");
+require("../../css/lib/reset.css")
+require("../../css/common/global.css")
+require("../../css/common/grid.css")
+require("../../css/page/index.less")
 
-
-$('.g-bd').append('<p class="text">这是由js生成的一句话。</p>');
+$('.g-bd').append('<p class="text">这是由js生成的一句话。</p>')
 ```
 
 index.html 内容如下：
@@ -96,21 +95,21 @@ index.html 内容如下：
 	<title>首页</title>
 	<meta name="description" content="基于webpack的前端工程化开发解决方案探索"/>
 	<!--
-        描述：head中无需再引入css以及facicon，webpack将根据入口JS文件的要求自动实现按需加载或者生成style标签
-    -->
+    描述：head中无需再引入css以及facicon，webpack将根据入口JS文件的要求自动实现按需加载或者生成style标签
+  -->
 </head>
 <body>
 	<div class="g-hd"></div>
 	<div class="g-bd">
 		<input type="button" value="弹窗" class="btn">
 		<p class="img">
-			<img src="../img/4.png" alt="">
+		  <img src="../img/4.png" alt="">
 		</p>
 	</div>
 	<div class="g-ft"></div>
 	<!--
-        描述：body中同样无需单独引入JS文件，webpack会根据入口JS文件自动实现按需加载或者生成script标签，还可以生成对应的hash值
-    -->
+    描述：body中同样无需单独引入JS文件，webpack会根据入口JS文件自动实现按需加载或者生成script标签，还可以生成对应的hash值
+  -->
 </body>
 </html>
 ```
@@ -122,12 +121,12 @@ about.js:
 
 ```javascript
 //引入css
-require("../../css/lib/reset.css");
-require("../../css/common/global.css");
-require("../../css/common/grid.css");
-require("../../css/page/about.less");
+require('../../css/lib/reset.css')
+require('../../css/common/global.css')
+require('../../css/common/grid.css')
+require('../../css/page/about.less')
 
-$('#about').html('这是一个关于webpack构建工程的栗子');
+$('#about').html('这是一个关于webpack构建工程的栗子')
 ```
 about.html:
 
@@ -152,15 +151,15 @@ list.js:
 
 ```javascript
 //引入css
-require("../../css/lib/reset.css");
-require("../../css/common/global.css");
-require("../../css/common/grid.css");
-require("../../css/page/list.less");
+require('../../css/lib/reset.css')
+require('../../css/common/global.css')
+require('../../css/common/grid.css')
+require('../../css/page/list.less')
 
 
-var html = '';
-for(var i=0;i<5;i++){
-	html += '<li>列表'+(i+1)+'</li>';
+var html = ''
+for(var i = 0; i < 5; i++){
+	html += '<li>列表' + (i + 1) + '</li>'
 }
 
 $('#list').html(html);
@@ -193,8 +192,8 @@ OK，太棒了！！！
 这里是关键，在webpack.config.js里，我们将进行一些配置，来完成我们的需求，一开始或许有点难理解，但等你真的掌握了，你便会惊呼它的神奇。配置中我写了详细的注释，要想彻底理解，还需多实践，多查阅文档，必要时看看源码，呜呼，学习之路漫漫兮。
 
 ```javascript
-var path = require('path');
-var webpack = require('webpack');
+var path = require('path')
+var webpack = require('webpack')
 /*
 extract-text-webpack-plugin插件，
 有了它就可以将你的样式提取到单独的css文件里，
