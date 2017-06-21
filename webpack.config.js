@@ -21,7 +21,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'dist'), // 输出目录的配置，模板、样式、脚本、图片等资源的路径配置都相对于它
-    publicPath: '/dist/',       // 模板、样式、脚本、图片等资源对应的server上的路径
+    publicPath: '/',       // 模板、样式、脚本、图片等资源对应的server上的路径
     filename: 'js/[name].js',     // 每个页面对应的主js的生成配置
     chunkFilename: 'js/[id].chunk.js'   // chunk生成的配置
   },
@@ -69,7 +69,7 @@ module.exports = {
     // HtmlWebpackPlugin，模板生成相关的配置，每个对于一个页面的配置，有几个写几个
     new HtmlWebpackPlugin({ // 根据模板插入css/js等生成最终HTML
       favicon: './src/img/favicon.ico', // favicon路径，通过webpack引入同时可以生成hash值
-      filename: './view/index.html', // 生成的html存放路径，相对于path
+      filename: './index.html', // 生成的html存放路径，相对于path
       template: './src/view/index.html', // html模板路径
       inject: 'body', // js插入的位置，true/'head'/'body'/false
       hash: true, // 为静态资源生成hash值
@@ -81,7 +81,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({ // 根据模板插入css/js等生成最终HTML
       favicon: './src/img/favicon.ico', // favicon路径，通过webpack引入同时可以生成hash值
-      filename: './view/list.html', // 生成的html存放路径，相对于path
+      filename: './list.html', // 生成的html存放路径，相对于path
       template: './src/view/list.html', // html模板路径
       inject: true, // js插入的位置，true/'head'/'body'/false
       hash: true, // 为静态资源生成hash值
@@ -93,7 +93,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({ // 根据模板插入css/js等生成最终HTML
       favicon: './src/img/favicon.ico', // favicon路径，通过webpack引入同时可以生成hash值
-      filename: './view/about.html', // 生成的html存放路径，相对于path
+      filename: './about.html', // 生成的html存放路径，相对于path
       template: './src/view/about.html', // html模板路径
       inject: true, // js插入的位置，true/'head'/'body'/false
       hash: true, // 为静态资源生成hash值
